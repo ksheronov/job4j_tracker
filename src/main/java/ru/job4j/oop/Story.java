@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class BallStory {
+public class Story {
     public static void main(String[] args) {
         Ball kolobok = new Ball();
         Hare zayac = new Hare();
