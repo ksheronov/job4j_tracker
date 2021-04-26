@@ -24,11 +24,10 @@ public class Library {
         System.out.println("Вывод книги Clean code: ");
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
-            if (bk.getName().equals("Clean code")) {
+            if ("Clean code".equals(bk.getName())) {
                 System.out.println("Номер в массиве - " + i
                         + System.lineSeparator()
                         + "Книга: " + bk.getName() + " количестов страниц: " + bk.getPages());
-                break;
             }
         }
     }
