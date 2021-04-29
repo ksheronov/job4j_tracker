@@ -25,7 +25,7 @@ public class Library {
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
             if ("Clean code".equals(bk.getName())) {
-                System.out.println("Номер в массиве - " + i
+                System.out.println("Номер книги в массиве: " + i
                         + System.lineSeparator()
                         + "Книга: " + bk.getName() + " количестов страниц: " + bk.getPages());
             }
