@@ -1,20 +1,21 @@
 package ru.job4j.oop;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.closeTo;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.offset;
 
 public class TriangleTest {
 
     @Test
-    public void area() {
+    public void when00and40and04Then8() {
         Point a = new Point(0, 0);
         Point b = new Point(4, 0);
         Point c = new Point(0, 4);
         Triangle triangle = new Triangle(a, b, c);
         double rsl = triangle.area();
-        assertThat(rsl, closeTo(8, 0.001));
+        double expected = 8;
+        assertThat(rsl).isCloseTo(expected, offset(0.001));
     }
 
     @Test
@@ -24,6 +25,16 @@ public class TriangleTest {
         Point c = new Point(0, 6);
         Triangle triangle = new Triangle(a, b, c);
         double rsl = triangle.area();
-        assertThat(rsl, closeTo(12.5, 0.001));
+        assertThat(rsl).isCloseTo(12.5, offset(0.001));
+    }
+
+    @Test
+    public void areaIs0() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 0);
+        Point c = new Point(0, 0);
+        Triangle triangle = new Triangle(a, b, c);
+        double rsl = triangle.area();
+        assertThat(rsl).isCloseTo(-1, offset(0.001));
     }
 }
