@@ -1,6 +1,6 @@
 package ru.job4j.pojo;
 
-public class Book1 {
+public class Book {
     private String name;
     private int pages;
 
