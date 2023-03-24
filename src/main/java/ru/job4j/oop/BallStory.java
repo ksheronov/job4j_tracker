@@ -9,5 +9,6 @@ public class BallStory {
         zayac.tryEat(kolobok);
         volk.tryEat(kolobok);
         lisa.tryEat(kolobok);
+
     }
 }
