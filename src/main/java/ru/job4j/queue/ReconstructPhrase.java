@@ -16,10 +16,10 @@ public class ReconstructPhrase {
         StringBuilder string = new StringBuilder();
         int size = evenElements.size();
         for (int i = 0; i < size; i++) {
-            Character ch = evenElements.pollFirst();
             if (i % 2 == 0) {
-                string.append(ch);
+                string.append(evenElements.peekFirst());
             }
+            evenElements.pollFirst();
         }
         return string.toString();
     }
