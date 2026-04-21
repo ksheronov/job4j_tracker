@@ -2,6 +2,13 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает клиента. Каждый клиент имеет Имя и паспорт
+ *
+ * @author Konstantin Sheronov
+ * @version 1.0
+ */
+
 public class User {
     private String passport;
     private String username;
